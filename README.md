@@ -1,28 +1,22 @@
 # SimplecovChecker
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/simplecov_checker`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem provides an eponymous class which iterates through a given directory checking for .rb files which are not
+listed in the latest SimpleCov resultset.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'simplecov_checker'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+The recommended thing is to just install it and run directly without adding it to your Gemfile.
 
     $ gem install simplecov_checker
 
+Of course if you to add any automation (eg. CI warnings) you may want to do the usual Gemfile dance, but that is left as
+an exercise to the reader.
+
 ## Usage
 
-TODO: Write usage instructions here
+Running via shell is a one-liner:
+
+    $ ruby -rsimplecov_checker -e 'puts SimplecovChecker.new.missed_files'
 
 ## Development
 
@@ -32,10 +26,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/simplecov_checker.
+Bug reports and pull requests are welcome on GitHub at https://github.com/gtd/simplecov_checker.
 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
