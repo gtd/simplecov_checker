@@ -1,5 +1,9 @@
 # SimpleCovChecker
 
+[![Build Status](https://travis-ci.org/gtd/simplecov_checker.svg)](https://travis-ci.org/gtd/simplecov_checker)
+[![Code Climate](https://codeclimate.com/github/gtd/simplecov_checker/badges/gpa.svg)](https://codeclimate.com/github/gtd/simplecov_checker)
+[![Test Coverage](https://codeclimate.com/github/gtd/simplecov_checker/badges/coverage.svg)](https://codeclimate.com/github/gtd/simplecov_checker/coverage)
+
 This gem provides an eponymous class which iterates through a given directory checking for .rb files which are not
 listed in the latest SimpleCov resultset.
 
