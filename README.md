@@ -1,4 +1,4 @@
-# SimplecovChecker
+# SimpleCovChecker
 
 This gem provides an eponymous class which iterates through a given directory checking for .rb files which are not
 listed in the latest SimpleCov resultset.
@@ -16,7 +16,7 @@ an exercise to the reader.
 
 Running via shell is a one-liner:
 
-    $ ruby -rsimplecov_checker -e 'puts SimplecovChecker.new.missed_files'
+    $ ruby -rsimplecov_checker -e 'puts SimpleCovChecker.new.missed_files'
 
 ## Development
 

@@ -1,11 +1,29 @@
 require 'spec_helper'
 
-describe SimplecovChecker do
+describe SimpleCovChecker do
   it 'has a version number' do
-    expect(SimplecovChecker::VERSION).not_to be nil
+    expect(SimpleCovChecker::VERSION).not_to be nil
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  describe "initialization" do
+    it 'blows up with invalid option' do
+      expect{ SimpleCovChecker.new(foo: "borken") }.to raise_error(ArgumentError)
+    end
+
+    it 'accepts source_path option' do
+      expect{ SimpleCovChecker.new(source_path: "valid_path") }.not_to raise_error
+    end
+
+    it 'accepts resultset_path option' do
+      expect{ SimpleCovChecker.new(resultset_path: "valid_path") }.not_to raise_error
+    end
+  end
+
+  describe "standard instance" do
+    subject { SimpleCovChecker.new(source_path: 'spec/fixtures/app', resultset_path: 'spec/fixtures/coverage') }
+
+    it 'returns a file while is never loaded' do
+      expect(subject.missed_files).to eq %w(spec/fixtures/app/models/uncovered.rb)
+    end
   end
 end

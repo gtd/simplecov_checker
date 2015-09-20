@@ -5,7 +5,7 @@ require 'simplecov_checker/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "simplecov_checker"
-  spec.version       = SimplecovChecker::VERSION
+  spec.version       = SimpleCovChecker::VERSION
   spec.authors       = ["Gabe da Silveira"]
   spec.email         = ["gabe@websaviour.com"]
 
