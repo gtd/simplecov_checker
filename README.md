@@ -22,6 +22,20 @@ Running via shell is a one-liner:
 
     $ ruby -rsimplecov_checker -e 'puts SimpleCovChecker.new.missed_files'
 
+### Options
+
+No options are necessary when running from the root of a standard Rails app, however if you are in a different
+directory, or you wish to narrow down the scope of which files you are checking, there are two options to help.
+
+You can specify `source_path` (default: `./app`) to narrow down the specific directory you want to check for uncovered files.
+
+    SimpleCovChecker.new(source_path: 'app/models')
+
+You can also override the location of the SimpleCov directory using `resultset_path` (default: `./coverage`).
+
+    SimpleCovChecker.new(resultset_path: 'app/models')
+
+
 ## Development
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
